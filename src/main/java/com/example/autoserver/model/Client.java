@@ -1,15 +1,23 @@
 package com.example.autoserver.model;
 
+import jakarta.persistence.*;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-@Configuration
+@Entity
+@Table(name = "Client")
 public class Client {
+    @Id
+    @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private int id;                                             // Поля класса
     private String name;
     private String email;
     private String phone;
+
+    public Client() {
+
+    }
 
     public int getId() {                             // Набор геттеров и сетеров
         return id;
