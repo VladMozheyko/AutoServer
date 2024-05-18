@@ -1,2 +1,3 @@
-package com.example.autoserver.controller;public class ClientController {
+package com.example.autoserver.controller;
+public class ClientController {
 }

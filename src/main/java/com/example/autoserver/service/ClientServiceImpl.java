@@ -1,2 +1,3 @@
-package com.example.autoserver.service;public class ClientServiceImpl {
+package com.example.autoserver.service;
+public class ClientServiceImpl {
 }
