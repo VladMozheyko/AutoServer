@@ -37,6 +37,7 @@ public class ClientController {
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
+    // Делаем новый коммит
 
     @GetMapping(value = "/clients")
     public ResponseEntity<List<Client>> read() {
