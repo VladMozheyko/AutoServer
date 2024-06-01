@@ -5,7 +5,8 @@ import com.example.autoserver.model.Client;
 import java.util.List;
 
 /**
- * Интерфейс для сервиса обработки клиентов
+ * Интерфейс для сервиса обработки клиентов при помощи оперативной памяти - создадим ClientService2 для
+ * раоты  с БД
  */
 
 public interface ClientService {

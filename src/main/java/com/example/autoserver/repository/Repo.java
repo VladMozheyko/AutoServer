@@ -5,6 +5,10 @@ import com.example.autoserver.model.Client;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Класс для хранения и обработки пользователей в оперативной памяти - передлаем репозиторий для взаимодействия
+ * с БД - создам интерфейс ClientRepository
+ */
 public class Repo {
 
     private final Map<Integer, Client> CLIENT_REPOSITORY_MAP = new HashMap<>();

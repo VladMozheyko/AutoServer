@@ -1,12 +1,14 @@
 package com.example.autoserver.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
-import org.springframework.context.annotation.Configuration;
 
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.ArrayList;
+import java.util.List;
+
 
 @Entity
-@Table(name = "Client")
+@Table(name = "client")
 public class Client {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
@@ -14,9 +16,20 @@ public class Client {
     private String name;
     private String email;
     private String phone;
+    @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
+    private List<Auto> autos;
 
     public Client() {
 
+    }
+
+    public List<Auto> getAutos() {
+        return autos;
+    }
+
+    public void setAutos(ArrayList<Auto> autos) {
+        this.autos = autos;
     }
 
     public int getId() {                             // Набор геттеров и сетеров
